@@ -11,5 +11,5 @@ edition = "2018"
 log = "0.4"
 lazy_static = { version = "1.4", features = ["spin_no_std"] }
 cfg-if = "1.0.0"
-[target.'cfg(any(target_arch = "riscv32", target_arch = "riscv64"))'.dependencies]
-riscv = { git = "https://github.com/rust-embedded/riscv", rev = "5fdc41e", features = ["inline-asm"] }
+[target.'cfg(all(target_os = "none", target_arch = "riscv64"))'.dependencies]
+riscv = { version = "0.7", features = ["inline-asm"] }
