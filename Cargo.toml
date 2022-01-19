@@ -1,7 +1,7 @@
 [package]
 name = "kernel_sync"
 version = "0.1.0"
-edition = "2021"
+edition = "2018"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
@@ -12,4 +12,4 @@ log = "0.4"
 lazy_static = { version = "1.4", features = ["spin_no_std"] }
 cfg-if = "1.0.0"
 [target.'cfg(any(target_arch = "riscv32", target_arch = "riscv64"))'.dependencies]
-riscv = { git = "https://github.com/rust-embedded/riscv", rev = "418c1053", features = ["inline-asm"] }
+riscv = { git = "https://github.com/rust-embedded/riscv", rev = "5fdc41e", features = ["inline-asm"] }
